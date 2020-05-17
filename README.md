@@ -1,2 +1,2 @@
 # Slider-testimonial
-Slider testimonial hecho con HTML, CSS y JS
+Slider testimonial responsive hecho con HTML, CSS y JS 
