@@ -59,3 +59,31 @@ btnRight.addEventListener('click', ()=>{
 
 	sliderTime = setInterval(()=>{slides()}, 3000);
 });
+
+// Barras
+
+let contentBars = document.querySelector('.bars');
+let bars = [];
+
+for(i=0; i < slide.length; i++){
+	let bar = document.createElement('div');
+	bar.className = 'bar';
+	bar.setAttribute('data-id', i);
+	bars.push(bar);
+
+	contentBars.appendChild(bars[i]);
+}
+
+bars.forEach((bar)=>{
+	bar.addEventListener('click', ()=>{
+		let id = bar.getAttribute('data-id');
+
+		slider.style.transform = 'translate(' + (- tamañoSlide * id) + 'px)';
+
+		window.clearInterval(sliderTime);
+
+		sliderTime = setInterval(()=>{slides()}, 3000);
+
+		contador = id;
+	});	
+});

@@ -23,7 +23,7 @@
 	overflow: hidden;
 	border-radius: 20px;
 	position: relative;
-	background: linear-gradient(to right, #03A9F4, #3F51B5, #303F9F);
+	background: linear-gradient(to right, rgba(3, 169, 244, .7), rgba(63, 81, 181, .7), rgba(48, 63, 159, .7));
 }
 
 .slides{
@@ -94,6 +94,32 @@
 
 .btn:hover{
 	color: #7C4DFF;
+}
+
+.bars{
+	height: 15px;
+	width: 150px;
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.bar{
+	height: 5px;
+	width: 25px;
+	border-radius: 2px;
+	background: #fff;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.bar:hover{
+	height: 10px;
+	background: #7C4DFF;
 }
 
 @media screen and (max-width: 400px){
